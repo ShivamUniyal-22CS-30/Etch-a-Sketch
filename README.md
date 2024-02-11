@@ -8,7 +8,5 @@
 
 
 ## Learning
-
-
-
-
+- Arguement of forEach is a callBack function.
+- flex:1; 
