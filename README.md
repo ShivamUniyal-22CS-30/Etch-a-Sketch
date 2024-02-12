@@ -9,4 +9,7 @@
 
 ## Learning
 - Arguement of forEach is a callBack function.
-- flex:1; 
+- flex:1; w/o
+- async nature of js => 'DOMContentLoaded' eventListener.
+- sometimes eventListener are created before the element/ DOM is loaded leading to frustration.
+ 
