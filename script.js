@@ -1,7 +1,9 @@
-// puting 16*16 divs inside container div
-const containerDiv = document.querySelector('#container');  
+document.addEventListener('DOMContentLoaded',()=>{
 
-function makeGrids(size){
+    // puting 16*16 divs inside container div
+    const containerDiv = document.querySelector('#container');  
+    
+    function makeGrids(size){
     for(let rowIndex = 0; rowIndex < size; rowIndex++){
         let row = document.createElement('div');
         row.classList.add('gridRow');
@@ -18,16 +20,33 @@ function makeGrids(size){
         containerDiv.appendChild(row);
         
     }
+    
 }
 
-makeGrids(16);
-
-
 // HOVERING COLOR
- const gridItems = document.querySelectorAll('.gridItem');
+const gridItems = document.querySelectorAll('.gridItem');
 
 gridItems.forEach(function(gridItem){
-    gridItem.addEventListener('mouseover',()=>{
+    gridItem.addEventListener('mouseover',() => {
         gridItem.style.backgroundColor = 'pink';
+    });
+});
+
+// COSTUMIZING GRID
+const button = document.querySelector('button');
+button.addEventListener('click',()=>{
+    let noOfSquares = prompt("Enter no. of squares per side = ");
+
+    //self removing the gridRows
+    const removeRows = document.querySelectorAll('.gridRow');
+    removeRows.forEach((removeRow)=>{
+        removeRow.remove();
     })
-})
+    
+    //calling makeGrids() when the btn is clicked
+    makeGrids(noOfSquares);
+
+});
+
+
+});
