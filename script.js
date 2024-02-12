@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded',()=>{
         containerDiv.appendChild(row);
         
     }
+    // HOVERING COLOR
+    const gridItems = document.querySelectorAll('.gridItem');
+    
+    gridItems.forEach(function(gridItem){
+        gridItem.addEventListener('mouseover',() => {
+            gridItem.style.backgroundColor = 'pink';
+        });
+    });
     
 }
 
-// HOVERING COLOR
-const gridItems = document.querySelectorAll('.gridItem');
-
-gridItems.forEach(function(gridItem){
-    gridItem.addEventListener('mouseover',() => {
-        gridItem.style.backgroundColor = 'pink';
-    });
-});
 
 // COSTUMIZING GRID
 const button = document.querySelector('button');
