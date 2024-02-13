@@ -33,17 +33,28 @@ document.addEventListener('DOMContentLoaded',()=>{
         const randomRGB = document.querySelector('.randomRGB');
 
         randomRGB.addEventListener('click',() => {
-        gridItems.forEach((gridItem) => {
-            gridItem.addEventListener('mouseover',() => {
-                // Math.random() for random RGB
-                let rgb1 = Math.round(Math.random() * 255 + 1);
-                let rgb2 = Math.round(Math.random() * 255 + 1);
-                let rgb3 = Math.round(Math.random() * 255 + 1);
+            gridItems.forEach((gridItem) => {
+                gridItem.addEventListener('mouseover',() => {
+                    // Math.random() for random RGB
+                    let rgb1 = Math.round(Math.random() * 255 + 1);
+                    let rgb2 = Math.round(Math.random() * 255 + 1);
+                    let rgb3 = Math.round(Math.random() * 255 + 1);
 
-                gridItem.style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})` ;
-            })
-        })
-});
+                    gridItem.style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})` ;
+                });
+            });
+        });
+
+        // ERASER 
+        let eraserBtn = document.querySelector('.eraserBtn');
+
+        eraserBtn.addEventListener('click', () => {
+            gridItems.forEach((gridItem) => {
+                gridItem.addEventListener('mouseover',() => {
+                    gridItem.style.backgroundColor = 'white';
+                });
+            });
+        });
     
 }
 
