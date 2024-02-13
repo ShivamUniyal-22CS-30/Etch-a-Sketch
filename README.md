@@ -12,4 +12,6 @@
 - flex:1; w/o
 - async nature of js => 'DOMContentLoaded' eventListener.
 - sometimes eventListener are created before the element/ DOM is loaded leading to frustration.
+- rgb() is not a inBuilt function in JS as it is in CSS.
+- array.forEach((arrayElement) => { code });
  
