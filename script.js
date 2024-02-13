@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         
         gridItems.forEach(function(gridItem){
             gridItem.addEventListener('mouseover',() => {
-                gridItem.style.backgroundColor = 'brown';
+                gridItem.style.backgroundColor = "pink";
             });
         });
 
@@ -51,9 +51,18 @@ document.addEventListener('DOMContentLoaded',()=>{
         eraserBtn.addEventListener('click', () => {
             gridItems.forEach((gridItem) => {
                 gridItem.addEventListener('mouseover',() => {
-                    gridItem.style.backgroundColor = 'white';
+                    gridItem.style.backgroundColor = "white";
                 });
             });
+        });
+
+        //CLEARING the CANVAS
+        let clearBtn = document.querySelector('.clearBtn');
+
+        clearBtn.addEventListener('click', () => {
+            gridItems.forEach((gridItem) => {
+                gridItem.style.backgroundColor = 'white';
+            })
         });
     
 }
