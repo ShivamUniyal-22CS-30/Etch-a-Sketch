@@ -42,13 +42,24 @@ h1{
 button{
     padding: 15px;
     font-size: 25px;
-    border-radius: 5px;
+    font-weight: bolder;
+    border-radius: 15px;
     display: block;
     width: auto;
     margin:0px auto;
     margin-bottom: 20px;
 
     background-color:aliceblue;
-    border: 1px solid ;
+    border: 3px solid ;
     color:#e7a452;
 }
+
+.allBackground{
+    width:850px;
+    height: 850px;
+    border-radius: 25px;
+    margin:50px auto;
+    padding: 20px;
+    background-color: rgb(201, 220, 226);
+}
+
