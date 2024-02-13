@@ -18,9 +18,9 @@ h1{
 }
 
 #container{
-    background-color:white;
-    border: 5px solid #f2c274;
-    border-radius:7px;
+    background-color:rgb(255, 255, 255);
+    border: 6px solid #f2c274;
+    border-radius:15px;
     width: 700px;
     height: 700px;
     margin:3px auto;
@@ -45,7 +45,7 @@ button{
     font-weight: bolder;
     border-radius: 15px;
     display: block;
-    width: auto;
+    width: 250px;
     margin:0px auto;
     margin-bottom: 20px;
 
@@ -55,11 +55,24 @@ button{
 }
 
 .allBackground{
-    width:1000px;
+    width:fit-content;
     height: 850px;
     border-radius: 25px;
     margin:50px auto;
-    padding: 20px;
+    padding:50px 50px;
     background-color: rgb(201, 220, 226);
+
+    /* positioning buttons w.r.t the canvas */
+    display: flex;
+    align-items: center;
+
+}
+
+.allButtons{
+    /* border:2px solid brown; */
+    margin: 30px 0px;
+    margin-right: 50px;
+    height: 400px;
+    align-self: flex-start;
 }
 
