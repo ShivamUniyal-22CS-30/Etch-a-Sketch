@@ -68,15 +68,31 @@ document.addEventListener('DOMContentLoaded',()=>{
             })
         });
 
-
-        // PROGRESSIVE 10% DARKENING
+        // PROGRESSIVE 10% DARKENING :
         let darkerBtn = document.querySelector('.darkerBtn');
 
+        
         darkerBtn.addEventListener('click',() => {
+
+            let R = Math.round(Math.random() * 256);
+            let G = Math.round(Math.random() * 256);
+            let B = Math.round(Math.random() * 256);
+            
             gridItems.forEach((gridItem) => {
+                let counter=0;
                 gridItem.addEventListener('mouseover', () => {
-                    gridItem.style.backgroundColor = 'black';
+
+                    if(counter < 10)
+                    {
+                        gridItem.style.backgroundColor = `rgb(${R},${G}, ${B})`;
+                        //incrementing 10%
+                        R -= R/10; G -= G/10; B -= B/10;
+
+                        counter++;
+                    }
                 });
+                    
+                
             });
         });
     
