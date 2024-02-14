@@ -32,15 +32,18 @@ document.addEventListener('DOMContentLoaded',()=>{
         // RANDOMrgb BACKGROUND TO GRIDITEM
         const randomRGB = document.querySelector('.randomRGB');
 
+        function randomColourFunc(){
+            let rgb1 = Math.round(Math.random() * 255 + 1);
+            let rgb2 = Math.round(Math.random() * 255 + 1);
+            let rgb3 = Math.round(Math.random() * 255 + 1);
+            return `rgb(${rgb1}, ${rgb2}, ${rgb3})`;
+        }
+
         randomRGB.addEventListener('click',() => {
             gridItems.forEach((gridItem) => {
                 gridItem.addEventListener('mouseover',() => {
                     // Math.random() for random RGB
-                    let rgb1 = Math.round(Math.random() * 255 + 1);
-                    let rgb2 = Math.round(Math.random() * 255 + 1);
-                    let rgb3 = Math.round(Math.random() * 255 + 1);
-
-                    gridItem.style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})` ;
+                    gridItem.style.backgroundColor = randomColourFunc() ;
                 });
             });
         });
@@ -63,6 +66,18 @@ document.addEventListener('DOMContentLoaded',()=>{
             gridItems.forEach((gridItem) => {
                 gridItem.style.backgroundColor = 'white';
             })
+        });
+
+
+        // PROGRESSIVE 10% DARKENING
+        let darkerBtn = document.querySelector('.darkerBtn');
+
+        darkerBtn.addEventListener('click',() => {
+            gridItems.forEach((gridItem) => {
+                gridItem.addEventListener('mouseover', () => {
+                    gridItem.style.backgroundColor = 'black';
+                });
+            });
         });
     
 }
