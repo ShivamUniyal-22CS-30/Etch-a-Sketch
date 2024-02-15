@@ -6,9 +6,7 @@
 }
 
 body{
-    /* background-color: rgb(231, 243, 254); */
     background-color:rgb(228, 243, 255);
-
 }
 
 h1{
@@ -19,9 +17,7 @@ h1{
     font-weight: bold;
     color: #ffaf4e;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-    /* text-transform: uppercase; */
     letter-spacing: 2px;
-    animation: title-animation 3s linear infinite;
 }
 
 
@@ -87,7 +83,6 @@ button:hover {
 }
 
 .allButtons{
-    /* border:2px solid brown; */
     margin: 30px 0px;
     margin-right: 50px;
     height: 400px;
